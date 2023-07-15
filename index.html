@@ -1,0 +1,530 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Tailwind Design</title>
+</head>
+
+<body>
+    <!-- Main navigation container -->
+    <nav class="flex-no-wrap relative flex w-full items-center justify-between bg-[#FBFBFB] py-2 shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4"
+        data-te-navbar-ref>
+        <div class="flex w-full flex-wrap items-center justify-between px-3">
+            <!-- Hamburger button for mobile view -->
+            <button
+                class="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+                type="button" data-te-collapse-init data-te-target="#navbarSupportedContent1"
+                aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Hamburger icon -->
+                <span class="[&>svg]:w-7">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-7 w-7">
+                        <path fill-rule="evenodd"
+                            d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </span>
+            </button>
+    
+            <!-- Collapsible navigation container -->
+            <div class="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
+                id="navbarSupportedContent1" data-te-collapse-item>
+                <!-- Left navigation links -->
+                <ul class="list-style-none mr-auto flex flex-col pl-0 lg:flex-row" data-te-navbar-nav-ref>
+                    <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+                        <!-- Dashboard link -->
+                        <a class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
+                            href="#" data-te-nav-link-ref>Home</a>
+                    </li>
+                    <!-- Team link -->
+                    <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+                        <a class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                            href="#" data-te-nav-link-ref>Services</a>
+                    </li>
+                    <!-- Projects link -->
+                    <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+                        <a class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                            href="#" data-te-nav-link-ref>Contact Us</a>
+                    </li>
+                    <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+                        <a class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                            href="#" data-te-nav-link-ref>Blogs</a>
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- Right elements -->
+            <div class="relative flex items-center">
+                <!-- Cart Icon -->
+                <a class="mr-4 text-neutral-600 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                    href="#">
+                    <span class="[&>svg]:w-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+                            <path
+                                d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+                        </svg>
+                    </span>
+                </a>
+    
+                <!-- Container with two dropdown menus -->
+                <div class="relative" data-te-dropdown-ref>
+                    <!-- First dropdown trigger -->
+                    <a class="hidden-arrow mr-4 flex items-center text-neutral-600 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                        href="#" id="dropdownMenuButton1" role="button" data-te-dropdown-toggle-ref aria-expanded="false">
+                        <!-- Dropdown trigger icon -->
+                        <span class="[&>svg]:w-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+                                <path fill-rule="evenodd"
+                                    d="M5.25 9a6.75 6.75 0 0113.5 0v.75c0 2.123.8 4.057 2.118 5.52a.75.75 0 01-.297 1.206c-1.544.57-3.16.99-4.831 1.243a3.75 3.75 0 11-7.48 0 24.585 24.585 0 01-4.831-1.244.75.75 0 01-.298-1.205A8.217 8.217 0 005.25 9.75V9zm4.502 8.9a2.25 2.25 0 104.496 0 25.057 25.057 0 01-4.496 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                        <!-- Notification counter -->
+                        <span
+                            class="absolute -mt-4 ml-2.5 rounded-full bg-danger px-[0.35em] py-[0.15em] text-[0.6rem] font-bold leading-none text-white">1</span>
+                    </a>
+                    <!-- First dropdown menu -->
+                    <ul class="absolute left-auto right-0 z-[1000] float-left m-0 mt-1 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
+                        aria-labelledby="dropdownMenuButton1" data-te-dropdown-menu-ref>
+                        <!-- First dropdown menu items -->
+                        <li>
+                            <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
+                                href="#" data-te-dropdown-item-ref>Action</a>
+                        </li>
+                        <li>
+                            <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
+                                href="#" data-te-dropdown-item-ref>Another action</a>
+                        </li>
+                        <li>
+                            <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
+                                href="#" data-te-dropdown-item-ref>Something else here</a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <!-- Second dropdown container -->
+                <div class="relative" data-te-dropdown-ref>
+                    <!-- Second dropdown trigger -->
+                    <a class="hidden-arrow flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none"
+                        href="#" id="dropdownMenuButton2" role="button" data-te-dropdown-toggle-ref aria-expanded="false">
+                        <!-- User avatar -->
+                        <img src="https://tecdn.b-cdn.net/img/new/avatars/2.jpg" class="rounded-full"
+                            style="height: 25px; width: 25px" alt="" loading="lazy" />
+                    </a>
+                    <!-- Second dropdown menu -->
+                    <ul class="absolute left-auto right-0 z-[1000] float-left m-0 mt-1 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
+                        aria-labelledby="dropdownMenuButton2" data-te-dropdown-menu-ref>
+                        <!-- Second dropdown menu items -->
+                        <li>
+                            <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
+                                href="#" data-te-dropdown-item-ref>Action</a>
+                        </li>
+                        <li>
+                            <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
+                                href="#" data-te-dropdown-item-ref>Another action</a>
+                        </li>
+                        <li>
+                            <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
+                                href="#" data-te-dropdown-item-ref>Something else here</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Start Our Landing -->
+
+    <div class="landing h-96 bg-gray-700 flex items-center justify-center relative">
+        <div class="container mx-auto">
+            <div class="text-center text-white">
+                <h1 class="text-3xl md:text-5xl">Taste the Creativity</h1>
+                <p class="text-sm text-gray-300 mb-5 md:text-xl">We make awesome graphic and web design</p>
+                <a class="btn rounded-full main-btn text-xl cursor-pointer" href="#features">Get Started</a>
+            </div>
+        </div>
+    </div>
+    <!-- End Our Landing -->
+
+    <!-- Start Our Features -->
+
+    <div class="features relative pt-5 pb-3" id="features">
+        <div class="container mx-auto text-center">
+            <div class="relative pb-3 before:content-[''] before:w-64 before:h-0.5 before:absolute before:top-full before:left-[50%]  before:translate-x-[-50%] before:bg-blue-600 mt-5 mb-5 flex justify-center items-center flex-col">
+                <img class="mb-4" src="imgs/title.png" alt="" />
+                <h2 class="text-5xl">We are Good at</h2>
+                <p class="text-slate-500 uppercase text-xl">Some Of These Stuff Under</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-8">
+                <div> 
+                    <div class="feat">
+                        <div>
+                            <i class="fa-brands fa-windows fa-4x  text-cyan-400"></i>
+                        </div>
+                        <h4 class="mb-3 mt-3 uppercase text-2xl text-yellow-600">Windows</h4>
+                        <p class="text-slate-400 leading-relaxed text-xl">
+                            Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo, lacinia eget consectetur sed,
+                            convallis at tellus.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="feat">
+                        <div>
+                            <i class="fa-brands fa-wordpress fa-4x  text-cyan-400"></i>
+                        </div>
+                        <h4 class="mb-3 mt-3 uppercase text-2xl text-yellow-600">WordPress</h4>
+                        <p class="text-slate-400 leading-relaxed text-xl">
+                            Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo, lacinia eget consectetur sed,
+                            convallis at tellus.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="feat">
+                        <div>
+                            <i class="fa-brands fa-docker fa-4x  text-cyan-400"></i>
+                        </div>
+                        <h4 class="mb-3 mt-3 uppercase text-2xl text-yellow-600">Docker</h4>
+                        <p class="text-slate-400 leading-relaxed text-xl">
+                            Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo, lacinia eget consectetur sed,
+                            convallis at tellus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- End Our Features -->
+
+    <!-- Start Our Work -->
+    <div class="our-work text-center pt-5 pb-5">
+        <div class="container mx-auto">
+            <div
+                class="relative pb-3 before:content-[''] before:w-64 before:h-0.5 before:absolute before:top-full before:left-[50%]  before:translate-x-[-50%] before:bg-blue-600 mt-5 mb-5 flex justify-center items-center flex-col ">
+                <img class="mb-4" src="imgs/title.png" alt="" />
+                <h2 class="text-5xl">We are Good at</h2>
+                <p class="text-slate-500 uppercase text-xl">Some Of These Stuff Under</p>
+            </div>
+            <ul class="flex justify-center mt-5 mb-5 text-xl">
+                <li class="mx-2">All</li>
+                <li class="mx-2">Design</li>
+                <li class="mx-2">Code</li>
+                <li class="mx-2">Photo</li>
+                <li class="mx-2">App</li>
+            </ul>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                    <div class="box overflow-hidden  relative before:content-['avater1'] before:text-2xl before:flex before:justify-center hover:before:left-0 before:items-center before:w-full before:h-full before:absolute before:top-0 before:left-full before:opacity-70 before:text-white  before:bg-blue-600  flex justify-center items-center flex-col transition-all ease-in duration-500" data-work="Application">
+                        <img class="img-fluid w-full h-full" src="imgs/work-01.jpg" alt="" />
+                    </div>
+                    <div class="box overflow-hidden  relative before:content-['avater2'] before:text-2xl before:flex before:justify-center hover:before:left-0 before:items-center before:w-full before:h-full before:absolute before:top-0 before:left-full before:opacity-70 before:text-white  before:bg-blue-600  flex justify-center items-center flex-col transition-all ease-in duration-500" data-work="Application">
+                        <img class="img-fluid w-full" src="imgs/work-02.jpg" alt="" />
+                    </div>
+                    <div class="box overflow-hidden  relative before:content-['avater3'] before:text-2xl before:flex before:justify-center hover:before:left-0 before:items-center before:w-full before:h-full before:absolute before:top-0 before:left-full before:opacity-70 before:text-white  before:bg-blue-600  flex justify-center items-center flex-col transition-all ease-in duration-500" data-work="Application">
+                        <img class="img-fluid w-full" src="imgs/work-03.jpg" alt="" />
+                    </div>
+                    <div class="box overflow-hidden  relative before:content-['avater4'] before:text-2xl before:flex before:justify-center hover:before:left-0 before:items-center before:w-full before:h-full before:absolute before:top-0 before:left-full before:opacity-70 before:text-white  before:bg-blue-600  flex justify-center items-center flex-col transition-all ease-in duration-500" data-work="Application">
+                        <img class="img-fluid w-full" src="imgs/work-04.jpg" alt="" />
+                    </div>
+                    <div class="box overflow-hidden  relative before:content-['avater5'] before:text-2xl before:flex before:justify-center hover:before:left-0 before:items-center before:w-full before:h-full before:absolute before:top-0 before:left-full before:opacity-70 before:text-white  before:bg-blue-600  flex justify-center items-center flex-col transition-all ease-in duration-500" data-work="Application">
+                        <img class="img-fluid w-full" src="imgs/work-05.jpg" alt="" />
+                    </div>
+                    <div class="box overflow-hidden  relative before:content-['avater6'] before:text-2xl before:flex before:justify-center hover:before:left-0 before:items-center before:w-full before:h-full before:absolute before:top-0 before:left-full before:opacity-70 before:text-white  before:bg-blue-600  flex justify-center items-center flex-col transition-all ease-in duration-500" data-work="Application">
+                        <img class="img-fluid w-full" src="imgs/work-06.jpg" alt="" />
+                    </div>
+                    <div class="box overflow-hidden  relative before:content-['avater7'] before:text-2xl before:flex before:justify-center hover:before:left-0 before:items-center before:w-full before:h-full before:absolute before:top-0 before:left-full before:opacity-70 before:text-white  before:bg-blue-600  flex justify-center items-center flex-col transition-all ease-in duration-500" data-work="Application">
+                        <img class="img-fluid w-full" src="imgs/work-07.jpg" alt="" />
+                    </div>
+                    <div class="box overflow-hidden  relative before:content-['avater8'] before:text-2xl before:flex before:justify-center hover:before:left-0 before:items-center before:w-full before:h-full before:absolute before:top-0 before:left-full before:opacity-70 before:text-white  before:bg-blue-600  flex justify-center items-center flex-col transition-all ease-in duration-500" data-work="Application">
+                        <img class="img-fluid w-full" src="imgs/work-08.jpg" alt="" />
+                    </div>
+            </div>
+            <div class="d-flex justify-content-center mt-5">
+                <a class="btn rounded-full main-btn uppercase" href="#">I Want More</a>
+            </div>
+        </div>
+    </div>
+    <!-- End Our Work -->
+
+    <!-- Start Stuff -->
+    <div class="stuff pt-5">
+        <div class="container mx-auto">
+            <div
+                class="relative pb-3 before:content-[''] before:w-64 before:h-0.5 before:absolute before:top-full before:left-[50%]  before:translate-x-[-50%] before:bg-blue-600 mt-5 mb-5 flex justify-center items-center flex-col">
+                <img class="mb-4" src="imgs/title.png" alt="" />
+                <h2 class="text-5xl">We are Good at</h2>
+                <p class="text-slate-500 uppercase text-xl">Some Of These Stuff Under</p>
+            </div>
+            <p class="description text-center mb-5 text-slate-500 m-auto w-2/3 text-2xl">
+                Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+                Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus. Donec sollicitudin molestie malesuada.
+            </p>
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-3 mt-4 mb-4">
+                    <div class="leading-loose">
+                        <h4 class="text-2xl text-center font-bold	">Retina Design</h4>
+                        <p class="text-center mb-5 text-slate-500 m-auto  text-2xl leading-loose">
+                            Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet
+                            elit, eget
+                            tincidunt nibh pulvinar a.
+                        </p>
+                        <p class="text-center mb-5 text-slate-500 m-auto  text-2xl leading-loose">
+                            Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh
+                            pulvinar a.
+                            Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus. Donec sollicitudin
+                            molestie
+                            malesuada.
+                        </p>
+                    </div>
+                    <div class="image">
+                        <img class="img-fluid w-full h-full" src="imgs/laptop.png" alt="" />
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Stuff -->
+    <!-- Start Team -->
+    <div class="team text-center pb-5 pt-5 bg-zinc-100">
+        <div class="container mx-auto pb-5 pt-5">
+            <h2 class="font-bold text-2xl  text-yellow-400">Meet The Team</h2>
+            <p class="text-gray-900  mb-5 text-center leading-loose">
+                Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+                Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus. Donec sollicitudin molestie malesuada.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
+                    <div class="box bg-white shadow-lg">
+                        <img class="img-fluid w-full" src="imgs/team-1.png" alt="" />
+                        <h4 class="p-3 bg-cyan-600 text-white text-xl font-bold">Abdullah</h4>
+                        <blockquote class="text-black-50 p-3">
+                            “I don't understand how we got by those troops. I thought we were dead.“
+                        </blockquote>
+                    </div>
+                    <div class="box bg-white">
+                        <img class="img-fluid w-full" src="imgs/team-2.png" alt="" />
+                        <h4 class="p-3 bg-cyan-600 text-white text-xl font-bold">Hani</h4>
+                        <blockquote class="text-black-50 p-3">
+                            “I don't understand how we got by those troops. I thought we were dead.“
+                        </blockquote>
+                    </div>
+                    <div class="box bg-white">
+                        <img class="img-fluid w-full" src="imgs/team-3.png" alt="" />
+                        <h4 class="p-3 bg-cyan-600 text-white text-xl font-bold">Ahmed</h4>
+                        <blockquote class="text-black-50 p-3">
+                            “I don't understand how we got by those troops. I thought we were dead.“
+                        </blockquote>
+                    </div>
+                    <div class="box bg-white">
+                        <img class="img-fluid w-full" src="imgs/team-4.png" alt="" />
+                        <h4 class="p-3 bg-cyan-600 text-white text-xl font-bold">Mohamed</h4>
+                        <blockquote class="text-black-50 p-3">
+                            “I don't understand how we got by those troops. I thought we were dead.“
+                        </blockquote>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Team -->
+    <!-- Start Techs -->
+    <div class="techs pt-5 pb-5 text-center">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div class="flex justify-center">
+                    <img class="img-fluid" src="imgs/tech-1.png" alt="" />
+                </div>
+                <div class="flex justify-center">
+                    <img class="img-fluid" src="imgs/tech-2.png" alt="" />
+                </div>
+                <div class="flex justify-center">
+                    <img class="img-fluid" src="imgs/tech-3.png" alt="" />
+                </div>
+                <div class="flex justify-center">
+                    <img class="img-fluid" src="imgs/tech-4.png" alt="" />
+                </div>
+                <div class="flex justify-center">
+                    <img class="img-fluid" src="imgs/tech-1.png" alt="" />
+                </div>
+                <div class="flex justify-center">
+                    <img class="img-fluid" src="imgs/tech-2.png" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Techs -->
+
+<!-- Start Project  -->
+<div class="project text-center pt-5 pb-5 text-white bg-gray-900 text-xl">
+    <h2 class="text-2xl">Start Your Project Now</h2>
+    <p class="text-slate-500 leading-loose">Leave your description and we start the engine.Don't worry,you can cancel anytime</p>
+    <div class="d-flex justify-content-center mt-5 mb-5">
+        <a class="btn rounded-full main-btn uppercase" href="#">Start Project</a>
+    </div>
+</div>
+<!-- End Project  -->
+<!-- Start Blogs -->
+<div class="blog pt-5 pb-5">
+    <div class="container mx-auto">
+        <div
+            class="relative pb-3 before:content-[''] before:w-64 before:h-0.5 before:absolute before:top-full before:left-[50%]  before:translate-x-[-50%] before:bg-blue-600 mt-5 mb-5 flex justify-center items-center flex-col">
+            <img class="mb-4" src="imgs/title.png" alt="" />
+            <h2 class="text-5xl">We are Good at</h2>
+            <p class="text-slate-500 uppercase text-xl">Some Of These Stuff Under</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
+            <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <img class="rounded-t-lg w-full" src="imgs/blog-1.jpg" alt="" />
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
+                            acquisitions 2021</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
+                        acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <a href="#"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Read more
+                        <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <img class="rounded-t-lg w-full" src="imgs/blog-2.jpg" alt="" />
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
+                            acquisitions 2021</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
+                        acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <a href="#"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Read more
+                        <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <img class="rounded-t-lg w-full" src="imgs/blog-3.jpg" alt="" />
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
+                            acquisitions 2021</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
+                        acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <a href="#"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Read more
+                        <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center mt-5 mb-5">
+            <a class="btn rounded-full main-btn uppercase" href="#">More Stories</a>
+        </div>
+    </div>
+</div>
+<!-- End Blogs -->
+<!-- Start Footer  -->
+<div class="footer pt-7 pb-7 text-slate-400 bg-gray-900">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+            <div>
+                <div class="info mb-5">
+                    <img src="imgs/logo.png" alt="" class="mb-4" />
+                    <p class="mb-5 leading-loose text-xl">
+                        Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo, lacinia eget consectetur sed,
+                        convallis at tellus.
+                    </p>
+                    <div class="copyright">
+                        Created By <span class="text-cyan-500">Abdullah</span>
+                        <div>&copy; 2022 - <span>Bondi Inc</span></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="links">
+                    <h5 class="text-white text-3xl">Links</h5>
+                    <ul class="list-unstyled lh-lg">
+                        <li class="my-3">Home</li>
+                        <li class="my-3">Our Services</li>
+                        <li class="my-3">Portfolio</li>
+                        <li class="my-3">Testimonials</li>
+                        <li class="my-3">Support</li>
+                        <li class="my-3">Terms and Condition</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="links">
+                    <h5 class="text-white text-3xl">About Us</h5>
+                    <ul class="list-unstyled lh-lg">
+                        <li class="my-3">Sign In</li>
+                        <li class="my-3">Register</li>
+                        <li class="my-3">About Us</li>
+                        <li class="my-3">Blog</li>
+                        <li class="my-3">Contact Us</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="contact">
+                    <h5 class="text-white text-3xl">Contact Us</h5>
+                    <p class="leading-loose mt-3 mb-5">Get in touch with us via mail phone.We are waiting for your call or
+                        message</p>
+                    <a class="btn rounded-full main-btn w-100" href="#">abdallhelhosary@gmail.com</a>
+                    <ul class="flex">
+                        <li class="my-4">
+                            <a class="d-block text-light" href="#"><i
+                                    class="fa-brands fa-facebook text-2xl text-blue-600  p-2"></i></a>
+                        </li>
+                        <li class="my-4">
+                            <a class="d-block text-light" href="#"><i
+                                    class="fa-brands fa-twitter text-2xl text-blue-400 p-2"></i></a>
+                        </li>
+                        <li class="my-4">
+                            <a class="d-block text-light" href="#"><i
+                                    class="fa-brands fa-linkedin text-2xl text-blue-900 p-2"></i></a>
+                        </li>
+                        <li class="my-4">
+                            <a class="d-block text-light" href="#"><i
+                                    class="fa-brands fa-youtube text-2xl text-red-600 p-2"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Footer -->
+
+    <script>
+        function Menu(e) {
+            let list = document.querySelector('ul');
+            e.name === 'menu' ? (e.name = "close", list.classList.add('top-[60px]'), list.classList.add('opacity-100')) : (e.name = "menu", list.classList.remove('top-[60px]'), list.classList.remove('opacity-100'))
+        }
+    </script>
+    <script type="text/javascript" src="./node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+</body>
+
+</html>
